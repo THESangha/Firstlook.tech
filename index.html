@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/build/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>Firstlook.tech</title>
 </head>
-<body>
-    <h1 class="text-4xl text-bold text-center">Firstlook.tech</h1>
+
+<body class="font-sans">
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <img src="./resources/Brand Assets/Logo/firstlook.tech (2).svg" alt="">
+        </div>
+    </header>
+    <!-- Topic Nav -->
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div
+                class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-white rounded py-2 px-4 mx-2">Apple</a>
+                <a href="#" class="hover:bg-white rounded py-2 px-4 mx-2">Amazon</a>
+                <a href="#" class="hover:bg-white rounded py-2 px-4 mx-2">Alphabet</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Posts Section -->
+    <section class="w-full md:w-2/3 flex flex-col items-center px-3 mx-auto pt-5">
+        <article class="flex flex-col shadow my-4">
+            <!-- Article Image -->
+            <a href="#ipad-launch" class="hover:opacity-75">
+                <img src="./resources/img/Apple_new-iPad-Pro_03182020.jpg">
+            </a>
+            <div class="bg-white flex flex-col justify-start p-6">
+                <a href="#A" class="text-blue-700 text-sm font-bold uppercase pb-4">Apple</a>
+                <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">Apple introduces new iPad Pro 2021 with
+                    M1 chip</a>
+                <p href="#" class="text-sm pb-3">
+                    By <a href="#" class="font-semibold hover:text-gray-800">Apple Newsroom</a>, Published on April
+                    25th,
+                    2020
+                </p>
+                <a href="https://nr.apple.com/dm3l7T1R5B" class="pb-6">“The revolutionary M1 chip has been a
+                    breakthrough for the Mac, and we’re incredibly excited to bring it to iPad Pro,” said Greg Joswiak,
+                    Apple’s senior vice president of Worldwide Marketing.</a>
+                <a href="https://nr.apple.com/dm3l7T1R5B" class="uppercase text-gray-800 hover:text-black">Continue
+                    Reading <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+    </section>
+    <footer class="w-full border-t bg-gray-900 pb-8">
+        <div class="w-full container mx-auto flex flex-col items-center">
+            <div class="flex flex-col md:flex-row text-white text-center md:text-left md:justify-between py-6">
+                <a href="#" class="uppercase px-3">About Us</a>
+                <a href="#" class="uppercase px-3">Privacy Policy</a>
+                <a href="#" class="uppercase px-3">Terms & Conditions</a>
+                <a href="#" class="uppercase px-3">Contact Us</a>
+            </div>
+            <div class="pb-4 text-white">&copy; firstlook.tech</div>
+        </div>
+    </footer>
 </body>
+
 </html>
